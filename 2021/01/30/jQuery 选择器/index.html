@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>SMARTBOOK</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="SMARTBOOK"><meta name="msapplication-TileImage" content="/img/机器人.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="SMARTBOOK"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="jQuery 选择器（二）"><meta property="og:type" content="blog"><meta property="og:title" content="SMARTBOOK"><meta property="og:url" content="http://blogpa.github.io/2021/01/30/jQuery%20%E9%80%89%E6%8B%A9%E5%99%A8/"><meta property="og:site_name" content="SMARTBOOK"><meta property="og:description" content="jQuery 选择器（二）"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://gitee.com/project_almanac/change/raw/master/jQuery/EHhqRLLWErlR.jpg"><meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/ad91180e72b9441b1b02ede48e1823f1.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/481f35e6b93ad673086ab33d2d582187.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/9a4c29b4031b06ba0f995d6752384fe9.png"><meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/3ac57f21bc53cd838e4d7e4fa92973c1.png"><meta property="article:published_time" content="2021-01-30T03:28:22.863Z"><meta property="article:modified_time" content="2021-01-30T03:33:46.294Z"><meta property="article:author" content="SMARTBOOK"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://gitee.com/project_almanac/change/raw/master/jQuery/EHhqRLLWErlR.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://blogpa.github.io/2021/01/30/jQuery%20%E9%80%89%E6%8B%A9%E5%99%A8/"},"headline":"SMARTBOOK","image":["https://gitee.com/project_almanac/change/raw/master/jQuery/EHhqRLLWErlR.jpg","https://img-blog.csdnimg.cn/img_convert/ad91180e72b9441b1b02ede48e1823f1.png","https://img-blog.csdnimg.cn/img_convert/481f35e6b93ad673086ab33d2d582187.png","https://img-blog.csdnimg.cn/img_convert/9a4c29b4031b06ba0f995d6752384fe9.png","https://img-blog.csdnimg.cn/img_convert/3ac57f21bc53cd838e4d7e4fa92973c1.png"],"datePublished":"2021-01-30T03:28:22.863Z","dateModified":"2021-01-30T03:33:46.294Z","author":{"@type":"Person","name":"SMARTBOOK"},"description":"jQuery 选择器（二）"}</script><link rel="canonical" href="http://blogpa.github.io/2021/01/30/jQuery%20%E9%80%89%E6%8B%A9%E5%99%A8/"><link rel="icon" href="/img/%E6%9C%BA%E5%99%A8%E4%BA%BA.svg"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo1.svg" alt="SMARTBOOK" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/links/">友链</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-01-30T03:28:22.863Z" title="2021-1-30 11:28:22 ├F10: AM┤">2021-01-30</time>发表</span><span class="level-item"><time dateTime="2021-01-30T03:33:46.294Z" title="2021-1-30 11:33:46 ├F10: AM┤">2021-01-30</time>更新</span><span class="level-item">9 分钟读完 (大约1414个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile"> </h1><div class="content"><h1 id="jQuery-选择器（二）"><a href="#jQuery-选择器（二）" class="headerlink" title="jQuery 选择器（二）"></a>jQuery 选择器（二）</h1><p><a target="_blank" rel="noopener" href="https://gitee.com/project_almanac/change/raw/master/jQuery/EHhqRLLWErlR.jpg"><img src="https://gitee.com/project_almanac/change/raw/master/jQuery/EHhqRLLWErlR.jpg" alt="https://gitee.com/project_almanac/change/raw/master/jQuery/EHhqRLLWErlR.jpg"></a></p>
+<a id="more"></a>
+<h2 id="内容过滤选择器"><a href="#内容过滤选择器" class="headerlink" title="内容过滤选择器"></a>内容过滤选择器</h2><p>jQuery 的内容过滤选择器具有以下几种：</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:contains()</code> 过滤选择器</td>
+<td>匹配包含给定文本的元素</td>
+</tr>
+<tr>
+<td><code>:empty</code> 过滤选择器</td>
+<td>匹配所有不包含子元素或者文本的空元素</td>
+</tr>
+<tr>
+<td><code>parent</code> 过滤选择器</td>
+<td>匹配含有子元素或者文本的元素</td>
+</tr>
+<tr>
+<td><code>has()</code> 过滤选择器</td>
+<td>匹配含有选择器所匹配的元素的元素</td>
+</tr>
+</tbody></table>
+<p>用法示例：</p>
+<p>body 部分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>这是一块测试 div <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;child&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript 部分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">// 匹配包含给定文本的元素</span></span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">&#x27;div:contains(&quot;di&quot;)&#x27;</span>));</span><br><span class="line">    <span class="comment">// 匹配所有不包含子元素或者文本的空元素</span></span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">&#x27;div:empty&#x27;</span>));</span><br><span class="line">    <span class="comment">// 匹配含有子元素或者文本的元素</span></span><br><span class="line">    <span class="built_in">console</span>.log($(<span class="string">&#x27;div:parent&#x27;</span>));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上述代码效果如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/project_almanac/change/raw/master/jQuery/8AaBPC@irYyv.png"><img src="https://img-blog.csdnimg.cn/img_convert/ad91180e72b9441b1b02ede48e1823f1.png" alt="https://gitee.com/project_almanac/change/raw/master/jQuery/8AaBPC@irYyv.png"></a></p>
+<p><code>:has()</code> 表示包含匹配指定选择器元素的父级元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div:has(&quot;#child&quot;)&#x27;</span>)[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<h2 id="可见性过滤选择器"><a href="#可见性过滤选择器" class="headerlink" title="可见性过滤选择器"></a>可见性过滤选择器</h2><p>jQuery 的可见性过滤选择器具有以下几种：</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:hidden</code> 过滤选择器</td>
+<td>匹配所有不可见元素,或者 <code>type</code> 为 <code>hidden</code> 的元素</td>
+</tr>
+<tr>
+<td><code>:visible</code> 过滤选择器</td>
+<td>匹配所有的可见元素</td>
+</tr>
+</tbody></table>
+<p>body 部分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d1&quot;</span>&gt;</span>启嘉网<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d2&quot;</span>&gt;</span>学编程，就是好<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">value</span>=<span class="string">&quot;用户名&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>:hidden</code> 选择器<ul>
+<li>不能匹配 CSS 样式元素 visibility 设置为 hidden 的隐藏元素</li>
+<li>还能匹配 HTML 页面中不做任何显示效果的元素</li>
+<li>用法 - 尽量确定元素类型或指定范围</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;:hidden&#x27;</span>));</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>:visible</code> 选择器<ul>
+<li>匹配 CSS 样式属性 visibility 设置为 hidden 的隐藏元素<ul>
+<li>当 visibility 设置为 hidden 时的元素，依旧占有页面空间</li>
+</ul>
+</li>
+<li>还能匹配 HTML 页面中 <html> 和 <body> 元素</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;:visible&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="属性过滤选择器"><a href="#属性过滤选择器" class="headerlink" title="属性过滤选择器"></a>属性过滤选择器</h2><p>jQuery 的属性过滤选择器具有以下几种：</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[attr]</code> 过滤选择器</td>
+<td>匹配包含给定属性的元素</td>
+</tr>
+<tr>
+<td><code>[attr=value]</code> 过滤选择器</td>
+<td>匹配给定的元素是某个特定值的元素</td>
+</tr>
+<tr>
+<td><code>[attr!=value]</code> 过滤选择器</td>
+<td>匹配所有不含有指定的元素,或者属性不等于特定值的元素</td>
+</tr>
+<tr>
+<td><code>[attr^=value]</code> 过滤选择器</td>
+<td>匹配给定的属性是以某些值开始的元素</td>
+</tr>
+<tr>
+<td><code>[attr$=value]</code> 过滤选择器</td>
+<td>匹配给定的属性是以某些值结尾的元素</td>
+</tr>
+<tr>
+<td><code>[attr*=value]</code> 过滤选择器</td>
+<td>匹配给定的属性是以包含某些值的元素</td>
+</tr>
+<tr>
+<td>组合属性过滤选择器</td>
+<td>匹配元素需要同时满足多个属性过滤选择器</td>
+</tr>
+</tbody></table>
+<p>用法示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span> <span class="attr">name</span>=<span class="string">&quot;d1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;mydiv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;d2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;mycls&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;myd&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div[name]&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div[class=mydiv]&#x27;</span>)); </span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div[class!=mydiv]&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div[class^=my]&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div[name=d1][class^=my]&#x27;</span>));</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>[attr!=value]</code> 选择器 - 包含没有 <code>attr</code> 属性的元素</li>
+<li>属性过滤选择器组合用法：交集</li>
+</ul>
+<p>上述代码运行效果如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/project_almanac/change/raw/master/jQuery/wdGawg*WuABF.png"><img src="https://img-blog.csdnimg.cn/img_convert/481f35e6b93ad673086ab33d2d582187.png" alt="https://gitee.com/project_almanac/change/raw/master/jQuery/wdGawg*WuABF.png"></a></p>
+<h2 id="子元素过滤选择器"><a href="#子元素过滤选择器" class="headerlink" title="子元素过滤选择器"></a>子元素过滤选择器</h2><p>jQuery 的子元素过滤选择器具有以下几种：</p>
+<table>
+<thead>
+<tr>
+<th align="left">选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>:nth-child()</code> 过滤选择器</td>
+<td>匹配其父元素下的第 N 个子或奇偶元素</td>
+</tr>
+<tr>
+<td align="left"><code>:first-child</code> 过滤选择器</td>
+<td>匹配第一个子元素</td>
+</tr>
+<tr>
+<td align="left"><code>last-child</code> 过滤选择器</td>
+<td>匹配最后一个子元素</td>
+</tr>
+<tr>
+<td align="left"><code>only-child</code> 过滤选择器</td>
+<td>如果某个元素是父元素中唯一的子元素,那么将会被匹配</td>
+</tr>
+</tbody></table>
+<p>用法示例：</p>
+<p>body 部分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;parent&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d1&quot;</span>&gt;</span>这是 id 为 d1 的 div 元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d2&quot;</span>&gt;</span>这是 id 为 d2 的 div 元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d3&quot;</span>&gt;</span>这是 id 为 d3 的 div 元素</span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;child&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript 部分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div:first-child&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div:last-child&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;div:only-child&#x27;</span>));</span><br></pre></td></tr></table></figure>
+<p><code>:nth-child(index)</code> 过滤选择器，用于匹配当前元素作为第 index 个子元素，但是 index 是从 1 开始，表示第几个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log($(&#39;div:nth-child(1)&#39;));</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/project_almanac/change/raw/master/jQuery/K8n4Kh!dpG5x.png"><img src="https://img-blog.csdnimg.cn/img_convert/9a4c29b4031b06ba0f995d6752384fe9.png" alt="https://gitee.com/project_almanac/change/raw/master/jQuery/K8n4Kh!dpG5x.png"></a></p>
+<h2 id="表单对象属性过滤选择器"><a href="#表单对象属性过滤选择器" class="headerlink" title="表单对象属性过滤选择器"></a>表单对象属性过滤选择器</h2><p>jQuery 的表单对象属性过滤选择器具有以下几种：</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:enabled</code> 过滤选择器</td>
+<td>匹配所有可用元素</td>
+</tr>
+<tr>
+<td><code>:disabled</code> 过滤选择器</td>
+<td>匹配所有不可用元素</td>
+</tr>
+<tr>
+<td><code>:checked</code> 过滤选择器</td>
+<td>匹配所有选中的被选中元素（复选框、单选框等）</td>
+</tr>
+<tr>
+<td><code>selected</code> 过滤选择器</td>
+<td>匹配所有选择的 <code>&lt;option&gt;</code> 元素</td>
+</tr>
+</tbody></table>
+<p>用法示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;input:disabled&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;input:checked&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;option:selected&#x27;</span>));</span><br></pre></td></tr></table></figure>
+<p>上述代码效果如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/project_almanac/change/raw/master/jQuery/jWvc8N7f0S"><img src="https://img-blog.csdnimg.cn/img_convert/3ac57f21bc53cd838e4d7e4fa92973c1.png" alt="https://gitee.com/project_almanac/change/raw/master/jQuery/jWvc8N7f0S"></a></p>
+<h2 id="表单选择器"><a href="#表单选择器" class="headerlink" title="表单选择器"></a>表单选择器</h2><p>jQuery 的表单选择器具有以下几种：</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:input</code> 选择器</td>
+<td>匹配所有 <code>input</code>、<code>textarea</code>、<code>select</code> 和 <code>button</code> 元素</td>
+</tr>
+<tr>
+<td><code>:text</code> 选择器</td>
+<td>匹配所有的单行文本框</td>
+</tr>
+<tr>
+<td><code>:password</code> 选择器</td>
+<td>匹配所有密码框</td>
+</tr>
+<tr>
+<td><code>:radio</code> 选择器</td>
+<td>匹配所有单选按钮</td>
+</tr>
+<tr>
+<td><code>:checkbox</code> 选择器</td>
+<td>匹配所有复选框</td>
+</tr>
+<tr>
+<td><code>:sumit</code> 选择器</td>
+<td>匹配所有提交按钮</td>
+</tr>
+<tr>
+<td><code>:reset</code> 选择器</td>
+<td>匹配所有重置按钮</td>
+</tr>
+<tr>
+<td><code>:button</code> 选择器</td>
+<td>匹配所有按钮</td>
+</tr>
+<tr>
+<td><code>:file</code> 选择器</td>
+<td>匹配所有文件域</td>
+</tr>
+<tr>
+<td><code>:image</code> 选择器</td>
+<td>匹配图像域</td>
+</tr>
+</tbody></table>
+<p>用法同上述选择器类似</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p><a href="http://blogpa.github.io/2021/01/30/jQuery%20%E9%80%89%E6%8B%A9%E5%99%A8/">http://blogpa.github.io/2021/01/30/jQuery%20%E9%80%89%E6%8B%A9%E5%99%A8/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>SMARTBOOK</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-01-30</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-01-30</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://gitee.com/project_almanac/change/raw/master/Aesthetics/4RDVOf@bhHYL.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://gitee.com/project_almanac/change/raw/master/Aesthetics/!6@08c0oWTIx.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/12/29/%E9%9D%92%E5%B9%B4%E5%9C%A8%E9%80%89%E6%8B%A9%E8%81%8C%E4%B8%9A%E6%97%B6%E7%9A%84%E8%80%83%E8%99%91/"><span class="level-item">青年在选择职业时的考虑</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://gitee.com/project_almanac/change/raw/master/JavaScript/g2@^tUhG170Z.jpg" alt="SMARTBOOK BLOG"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">SMARTBOOK BLOG</p><p class="is-size-6 is-block">我一直沉浸在如何解决自己的问题之中</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>中国.河北.邯郸</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/smartYearBook"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="E-Mail" href="mailto:tuoni006@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="CSDN" href="https://blog.csdn.net/weixin_46229298"><i class="fa fa-align-justify"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="启嘉网" href="http://www.change.tm"><i class="fa fa-code"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.moiakk.com/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">薄暮</span></span><span class="level-right"><span class="level-item tag">www.moiakk.com</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-30T03:28:22.863Z">2021-01-30</time></p><p class="title"><a href="/2021/01/30/jQuery%20%E9%80%89%E6%8B%A9%E5%99%A8/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-29T06:57:40.187Z">2020-12-29</time></p><p class="title"><a href="/2020/12/29/%E9%9D%92%E5%B9%B4%E5%9C%A8%E9%80%89%E6%8B%A9%E8%81%8C%E4%B8%9A%E6%97%B6%E7%9A%84%E8%80%83%E8%99%91/">青年在选择职业时的考虑</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E7%AB%A0/"><span class="tag">文章</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo1.svg" alt="SMARTBOOK" height="28"></a><p class="is-size-7"><span>&copy; 2021 SMARTBOOK</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
